@@ -1,0 +1,39 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd extendedglob nomatch notify
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/noa/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+plugins=(git starship)
+
+source $ZSH/oh-my-zsh.sh
+
+if [[ "$TERM" == "xterm-kitty" ]]; then
+	alias reset="reset xterm"
+fi
+alias vi=nvim
+alias ls=lsd
+
+function cl {
+	reset
+	fastfetch
+	ll
+}
+
+export SSH_AGENT_SOCK=/run/user/1000/gcr/ssh
+export PATH="/usr/local/bin:/usr/bin:/home/$USER/.local/bin"
+
+eval "$(chezmoi completion zsh)"
+
+cl
