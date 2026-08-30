@@ -1,1 +1,3 @@
-Hyprland config for Arch Linux
+Hyprland config for Arch Linux.
+
+added Waybar.
