@@ -1,3 +1,6 @@
-Hyprland config for Arch Linux
+Hyprland config for Arch Linux.
 
-Waybar added.
+added Waybar.
+
+
+Catpuchin theme
