@@ -5,3 +5,6 @@ added Waybar.
 I use Arch btw
 
 Catpuchin theme.
+
+
+Test
